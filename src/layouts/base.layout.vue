@@ -106,6 +106,12 @@ const tools = computed<ToolCategory[]>(() => [
           </c-button>
         </c-tooltip>
 
+        <c-tooltip tooltip="Blog" position="bottom">
+          <c-button v-if="config.app.env === 'development'" to="/blog" circle variant="text" aria-label="Blog">
+            <icon-mdi:brush-variant text-20px />
+          </c-button>
+        </c-tooltip>
+
         <command-palette />
 
         <div>
@@ -115,7 +121,7 @@ const tools = computed<ToolCategory[]>(() => [
         <c-tooltip position="bottom" tooltip="Support IT Tools development">
           <c-button
             round
-            href="https://www.buymeacoffee.com/cthmsst"
+            href="https://www.buymeacoffee.com/laoyang"
             rel="noopener"
             target="_blank"
             class="support-button"
